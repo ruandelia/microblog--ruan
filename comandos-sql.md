@@ -22,3 +22,41 @@ VALUES ('lívia', 'livia@gmail.com', 'aiii', 'editor');
 
 INSERT INTO usuarios(nome, email, senha, tipo)
 VALUES ('Magal', 'Magal@gmail.com', 'Miau', 'editor');
+
+## inserindo noticias
+
+INSERT INTO noticias(titulo, texto, resumo, imagem, usuario_id)
+VALUES (
+    'meu pai ganhou na mega-sena',
+    'to rico, Tchau pra vcs',
+    'Jogou e ganhou',
+    'premio.jpg',
+    1
+);
+
+INSERT INTO noticias(titulo, texto, resumo, imagem, usuario_id)
+VALUES (
+    'Corinthians classificado para pré-libertadores',
+    'Conseguimos se classificar na pura sorte ',
+    'Jogou e Conseguiu',
+    'corinthians.jpg',
+    4
+);
+
+INSERT INTO noticias(titulo, texto, resumo, imagem, usuario_id)
+VALUES (
+    'Ruan é gostoso!',
+    'ele é o cara mais Gostoso do mundo!',
+    'Ruan Premiado',
+    'ruan.jpg',
+    3
+);
+
+INSERT INTO noticias(titulo, texto, resumo, imagem, usuario_id)
+VALUES (
+    'miau, miau',
+    'Gatos são fodas!',
+    'Gato falante foda-se',
+    'miau.jpg',
+    4
+);
