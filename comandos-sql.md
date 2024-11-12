@@ -60,3 +60,20 @@ VALUES (
     'miau.jpg',
     4
 );
+
+## Leitura De Dados da tabela "noticias"
+
+SELECT data, titulo FROM noticias;
+
+SELECT nome, email, tipo FROM usuarios;
+
+SELECT nome, email, tipo FROM usuarios; WHERE tipo = 'editor';
+
+
+## Atualização de Dados dos Usuários
+
+UPDATE usuarios SET email = 'Ruan@gmail.comAtualizado' WHERE id = 1';
+
+## Excluindo Dados da tabela "noticias"
+
+DELETE FROM noticias WHERE id = 2;
