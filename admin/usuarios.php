@@ -40,13 +40,12 @@ foreach($listaDeUsuarios as $listaDeUsuario) {
 						<td><?=$listaDeUsuario['email']?></td>
 						<td><?=$listaDeUsuario['tipo']?></td>
 						<td class="text-center">
-							<a class="btn btn-warning" 
-							href="usuario-atualiza.php">
-							<i class="bi bi-pencil"></i> Atualizar
+							<a class="btn btn-warning" href="usuario-atualiza.php?id=<?=$listaDeUsuario['id']?>">
+								<i class="bi bi-pencil"></i> Atualizar
 							</a>
 						
 							<a class="btn btn-danger excluir" 
-							href="usuario-exclui.php">
+							href="usuario-exclui.php?id=<?=$listaDeUsuario['id']?>">
 							<i class="bi bi-trash"></i> Excluir
 							</a>
 						</td>
