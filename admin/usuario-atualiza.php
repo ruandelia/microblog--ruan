@@ -5,6 +5,24 @@ require "../includes/funcoes-usuarios.php";
 $id = $_GET['id'];
 
 $dadosUsuario = listarUmUsuario($conexao, $id);
+
+if( isset($_POST['atualizar']) ){
+	$nome = $_POST['nome'];
+	$email = $_POST['email'];
+	$tipo = $_POST['tipo'];
+
+	if( empty($_POST['senha']) || 
+	password_verify($_POST['senha'], $dadosUsuario['senha']) ){
+		//manter a mesma senha
+		$senha = $dadosUsuario['senha'];
+	} else{
+		$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+	}
+
+	atualizarUsuario($conexao, $id, $nome, $email, $senha, $tipo);
+
+	header("location:usuarios.php");
+}
 ?>
 
  

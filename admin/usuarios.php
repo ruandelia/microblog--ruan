@@ -46,7 +46,7 @@ foreach($listaDeUsuarios as $listaDeUsuario) {
 						
 							<a class="btn btn-danger excluir" 
 							href="usuario-exclui.php?id=<?=$listaDeUsuario['id']?>">
-							<i class="bi bi-trash"></i> Excluir
+							<i class="bi bi-trash?id=<?=$listaDeUsuario['id']?>"></i> Excluir
 							</a>
 						</td>
 					</tr>
