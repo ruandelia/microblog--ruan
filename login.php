@@ -1,5 +1,24 @@
 <?php
+require "includes/funcoes-controle-de-acesso.php";
+require "includes/funcoes-usuarios.php";
 require "includes/cabecalho.php"; 
+
+if( isset($_POST['entrar']) ){
+
+	/* validando os campos (seestão vazios) */
+	if( empty($_POST['email']) || empty($_POST['senha'])){
+
+		header("location:login.php?campos_obrigatorios");
+		die();
+	}
+
+	$email = $_POST['email'];
+	$senha = $_POST['senha'];
+
+	/* 1) buscando no banco de dados o usuarios através do email */
+	$usuario = buscarUsuario($conexao, $email);
+	
+}
 ?>
 
 <div class="row">
