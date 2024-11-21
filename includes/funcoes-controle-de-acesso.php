@@ -28,9 +28,17 @@ function verificarAcesso(){
 
 }
 
-$nome = "";
-if( isset($nome) ){
-    echo "ta vazio";
-}else{
-    echo "ta definido";
+/* função que será usada pelo formulário login.php */
+function login($id, $nome, $tipo){
+    //criando variáveis de sessão
+    $_SESSION['id'] = $id;
+    $_SESSION['nome'] = $nome;
+    $_SESSION['tipo'] = $tipo;
+}
+
+
+function logout(){
+    session_destroy();
+    header("location:../login.php?saiu");
+    die();
 }

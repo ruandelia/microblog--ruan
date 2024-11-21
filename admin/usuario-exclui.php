@@ -1,7 +1,7 @@
 <?php
-require "../includes/cabecalho-admin.php";
+require "../includes/funcoes-controle-de-acesso.php";
+verificarAcesso();
 require "../includes/funcoes-usuarios.php";
-require "../includes/rodape-admin.php";
 
 
 $id= $_GET['id'];
